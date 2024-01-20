@@ -17,9 +17,7 @@ class PaletteRow extends StatefulWidget {
       required this.palette,
       required this.deletePalette,
       required this.editPalette})
-      : super(key: key) {
-    print('asdf');
-  }
+      : super(key: key);
 
   @override
   State<StatefulWidget> createState() {

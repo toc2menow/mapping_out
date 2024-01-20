@@ -35,12 +35,10 @@ class _PaletteEditorState extends State<PaletteEditor> {
   }
 
   Palette addPalette(Color color, String legend) {
-    print('add');
     var order = 1;
     if (_palette.isNotEmpty) {
       final lastPalette = _palette[_palette.length - 1];
       order = lastPalette.order + 1;
-      print(order);
     }
     final newPalette = Palette(order: order, color: color, legend: legend);
     _palette.add(newPalette);
@@ -52,11 +50,7 @@ class _PaletteEditorState extends State<PaletteEditor> {
   }
 
   void deletePalette(int order) {
-    print('debug');
-    print(order);
     for (var p in _palette) {
-      print(p);
-      print(p.order);
       if (p.order == order) {
         _palette.remove(p);
         break;
